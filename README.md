@@ -13,8 +13,8 @@ npm start
 ```
 De server runt op [localhost:3000](http://localhost:3000).
 
+De server runt ook op [Heroku](https://mynodetodolistserver.herokuapp.com/api/v1/todos).
+
 ## API Endpoints
-- [localhost:3000/api/v1/actors](http://localhost:3000/api/v1/actors)
-- [localhost:3000/api/v1/actors/23](http://localhost:3000/api/v1/actors/23)
-- [localhost:3000/api/v1/search?type=actor](http://localhost:3000/api/v1/search?type=actor)
-- [localhost:3000/api/v1/search?type=actor&key=first_name&value=ED](http://localhost:3000/api/v1/search?type=actor&key=first_name&value=ED)
+- [localhost:3000/api/v1/todos](http://localhost:3000/api/v1/todos)
+- [localhost:3000/api/v1/todos/2](http://localhost:3000/api/v1/todos/2)

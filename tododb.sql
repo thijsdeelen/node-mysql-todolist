@@ -30,4 +30,4 @@ INSERT INTO `todos` (`Titel`,`Beschrijving`) VALUES
 ('Boodschappen halen', 'Niet vergeten om boodschappen te halen'),
 ('Huiswerk maken', 'Oefenen met nodejs, MySql en Git!'),
 ('Sporten', 'Ook belangrijk'),
-('Naar de film', 'Die laatste goeie film nog kijken!')
+('Naar de film', 'Die laatste goeie film nog kijken!');
