@@ -11,7 +11,7 @@ var connectionSettings = {
     user: process.env.DB_USER || config.dbUser,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE || config.dbDatabase,
-    debug: true
+    debug: false
 }
 
 var connection = mysql.createConnection(connectionSettings);
