@@ -30,7 +30,7 @@ routes.get('/todos/:id', function(req, res) {
 
     res.contentType('application/json');
 
-    db.query('SELECT * FROM todos WHERE todo_id=?', [todosId], function(error, rows, fields) {
+    db.query('SELECT * FROM todos WHERE ID=?', [todosId], function(error, rows, fields) {
         if (error) {
             res.status(400).json(error);
         } else {
@@ -75,10 +75,10 @@ routes.post('/todos', function(req, res) {
 routes.put('/todos/:id', function(req, res) {
 
     var todos = req.body;
-    var todo_id = req.params.id;
+    var ID = req.params.id;
     var query = {
-        sql: 'UPDATE `todos` SET Title=? , Beschrijving=? WHERE todo_id=?',
-        values: [todos.Title, todos.Beschrijving, todo_id],
+        sql: 'UPDATE `todos` SET Title=? , Beschrijving=? WHERE ID=?',
+        values: [todos.Title, todos.Beschrijving, ID],
         timeout: 2000 // 2secs
     };
 
@@ -106,10 +106,10 @@ routes.put('/todos/:id', function(req, res) {
 //
 routes.delete('/todos/:id', function(req, res) {
 
-    var todo_id = req.params.id;
+    var ID = req.params.id;
     var query = {
-        sql: 'DELETE FROM `todos` WHERE todo_id=?',
-        values: [todo_id],
+        sql: 'DELETE FROM `todos` WHERE ID=?',
+        values: [ID],
         timeout: 2000 // 2secs
     };
 
