@@ -36,7 +36,7 @@ app.use('*', function(req, res) {
 });
 
 // Installatie klaar; start de server.
-app.listen(app.get('port'), function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log('De ToDo server luistert op port ' + app.get('port'));
 });
 
