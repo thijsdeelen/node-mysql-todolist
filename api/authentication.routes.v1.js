@@ -34,6 +34,7 @@ router.post('/login', function(req, res) {
             "token": token,
         });
     } else {
+        console.log('Input: username = ' + username + ', password = ' + password);
         res.status(401).json({ "error": "Invalid credentials, bye" })
     }
 
