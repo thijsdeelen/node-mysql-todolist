@@ -1,7 +1,7 @@
 {
-	"webPort"	: "3000",
-	"dbHost"	: "localhost",
-	"dbUser"	: "todolist_user", 
-	"dbDatabase": "todolist"
+    "webPort": "3000",
+    "dbHost": "localhost",
+    "dbUser": "todolist_user",
+    "dbDatabase": "todolist",
+    "secretkey": "een lange complexe tekst die moeilijk te raden is"
 }
-
