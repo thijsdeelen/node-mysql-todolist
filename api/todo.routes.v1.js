@@ -15,7 +15,7 @@ routes.get('/todos', function(req, res) {
         if (error) {
             res.status(400).json(error);
         } else {
-            res.status(200).json(rows);
+            res.status(200).json({ result: rows });
         };
     });
 });
@@ -34,7 +34,7 @@ routes.get('/todos/:id', function(req, res) {
         if (error) {
             res.status(400).json(error);
         } else {
-            res.status(200).json(rows);
+            res.status(200).json({ result: rows });
         };
     });
 });
@@ -60,7 +60,7 @@ routes.post('/todos', function(req, res) {
         if (error) {
             res.status(400).json(error);
         } else {
-            res.status(200).json(rows);
+            res.status(200).json({ result: rows });
         };
     });
 });
@@ -88,11 +88,9 @@ routes.put('/todos/:id', function(req, res) {
     res.contentType('application/json');
     db.query(query, function(error, rows, fields) {
         if (error) {
-            res.status(400);
-            res.json(error);
+            res.status(400).json(error);
         } else {
-            res.status(200);
-            res.json(rows);
+            res.status(200).json({ result: rows });
         };
     });
 });
@@ -118,11 +116,9 @@ routes.delete('/todos/:id', function(req, res) {
     res.contentType('application/json');
     db.query(query, function(error, rows, fields) {
         if (error) {
-            res.status(400);
-            res.json(error);
+            res.status(400).json(error);
         } else {
-            res.status(200);
-            res.json(rows);
+            res.status(200).json({ result: rows });
         };
     });
 });
