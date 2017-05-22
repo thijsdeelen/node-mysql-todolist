@@ -47,8 +47,8 @@ routes.post('/todos', function(req, res) {
 
     var todos = req.body;
     var query = {
-        sql: 'INSERT INTO `todos`(Titel, Beschrijving) VALUES (?, ?)',
-        values: [todos.titel, todos.beschrijving],
+        sql: 'INSERT INTO `todos`(`Titel`, `Beschrijving`) VALUES (?, ?)',
+        values: [todos.Titel, todos.Beschrijving],
         timeout: 2000 // 2secs
     };
 
