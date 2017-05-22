@@ -13,7 +13,7 @@ routes.get('/todos', function(req, res) {
 
     db.query('SELECT * FROM todos', function(error, rows, fields) {
         if (error) {
-            res.status(400).json(error);
+            res.status(401).json(error);
         } else {
             res.status(200).json({ result: rows });
         };
@@ -32,7 +32,7 @@ routes.get('/todos/:id', function(req, res) {
 
     db.query('SELECT * FROM todos WHERE ID=?', [todosId], function(error, rows, fields) {
         if (error) {
-            res.status(400).json(error);
+            res.status(401).json(error);
         } else {
             res.status(200).json({ result: rows });
         };
@@ -58,7 +58,7 @@ routes.post('/todos', function(req, res) {
     res.contentType('application/json');
     db.query(query, function(error, rows, fields) {
         if (error) {
-            res.status(400).json(error);
+            res.status(401).json(error);
         } else {
             res.status(200).json({ result: rows });
         };
@@ -88,7 +88,7 @@ routes.put('/todos/:id', function(req, res) {
     res.contentType('application/json');
     db.query(query, function(error, rows, fields) {
         if (error) {
-            res.status(400).json(error);
+            res.status(401).json(error);
         } else {
             res.status(200).json({ result: rows });
         };
@@ -116,7 +116,7 @@ routes.delete('/todos/:id', function(req, res) {
     res.contentType('application/json');
     db.query(query, function(error, rows, fields) {
         if (error) {
-            res.status(400).json(error);
+            res.status(401).json(error);
         } else {
             res.status(200).json({ result: rows });
         };
