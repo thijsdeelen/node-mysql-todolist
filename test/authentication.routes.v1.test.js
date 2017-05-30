@@ -47,7 +47,7 @@ describe('Auth API v1', function() {
     });
 
     it('returns a token on POST /api/v1/login', function(done) {
-        let user = {
+        var user = {
             username: "username",
             password: "password"
         }
