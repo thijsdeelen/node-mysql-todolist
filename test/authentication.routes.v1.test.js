@@ -30,7 +30,7 @@ describe('Auth API v1', function() {
     });
 
     it('returns an error on POST /api/v1/login with invalid credentials ', function(done) {
-        let user = {
+        var user = {
             username: "invalid"
         }
         chai.request(server)
