@@ -21,7 +21,7 @@ describe('GET /api/v1/todos', function() {
     // Before all tests: get a valid JWT token from the server
     //
     before(function(done) {
-        let user = {
+        var user = {
             username: "username",
             password: "password"
         }
