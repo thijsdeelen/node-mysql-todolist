@@ -25,8 +25,8 @@ router.post('/login', function(req, res) {
 
     // Dit is een dummy-user - die haal je natuurlijk uit de database.
     // Momenteel zetten we ze als environment variabelen. (Ook op Heroku!)
-    var _dummy_username = process.env.APP_USERNAME; // "username";
-    var _dummy_password = process.env.APP_PASSWORD; // "test";
+    var _dummy_username = process.env.APP_USERNAME || "username";
+    var _dummy_password = process.env.APP_PASSWORD || "test";
 
     // Kijk of de gegevens matchen. Zo ja, dan token genereren en terugsturen.
     if (username == _dummy_username && password == _dummy_password) {

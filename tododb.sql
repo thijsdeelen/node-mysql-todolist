@@ -4,7 +4,10 @@ CREATE DATABASE `todolist`;
 USE `todolist`;
 
 -- todolist_user aanmaken
-CREATE USER 'todolist_user'@'localhost' IDENTIFIED BY 'secret';
+CREATE USER 'todolist_user'@'localhost'; -- IDENTIFIED BY 'secret';
+
+-- wijzig password voor user
+SET PASSWORD FOR 'todolist_user'@'localhost' = PASSWORD('secret');
 
 -- geef in een keer alle rechten - soort administrator!
 GRANT ALL ON `todolist`.* TO 'todolist_user'@'localhost';
