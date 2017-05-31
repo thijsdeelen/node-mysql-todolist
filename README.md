@@ -1,5 +1,5 @@
 # node-msql-todolist
-Nodejs server, biedt API op een ToDo list MySql database.
+Nodejs server, biedt API op een ToDo list MySql database. De API endpoints zijn beveiligd met [JavaScript Web Tokens](https://jwt.io/), dus je moet inloggen voordat je de services kunt gebruiken.
 
 ## Vooraf
 - nodejs installeren
@@ -15,6 +15,23 @@ npm start
 De server runt op [localhost:3000](http://localhost:3000) en op [Heroku](https://mynodetodolistserver.herokuapp.com/api/v1/todos).
 
 ## API Endpoints
+Om de API te kunnen gebruiken moet je inloggen. Dat kan met [Postman](https://www.getpostman.com/docs/introduction). 
+Stuur een POST naar /api/v1/login met in de body:
+
+```
+{
+    "username": "username",
+    "password": "test"
+}
+```
+Je krijgt dan een JWT token dat je met ieder request in de header mee moet sturen. 
+De header die je moet instellen:
+
+```
+Authorization:   Bearer <jwt token>
+```
+
+Voorbeelden van endpoints: 
 - [localhost:3000/api/v1/todos](http://localhost:3000/api/v1/todos)
 - [localhost:3000/api/v1/todos/2](http://localhost:3000/api/v1/todos/2)
 
