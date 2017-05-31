@@ -4,6 +4,7 @@ Nodejs server, biedt API op een ToDo list MySql database.
 ## Vooraf
 - nodejs installeren
 - MySql of MariaDB installeren (bv. via XAMPP)
+- het script `tododb.sql` importeren in MySQL. 
 
 ## Gebruik
 Vanaf command line:
@@ -40,4 +41,4 @@ of
 ```
 npm run sonar
 ```
-Bekijk eventueel ook het bestand 'gulpfile.js'; dat bevat het script dat de analyse uitvoert.
+Bekijk eventueel ook het bestand `gulpfile.js`; dat bevat het script dat de analyse uitvoert.
