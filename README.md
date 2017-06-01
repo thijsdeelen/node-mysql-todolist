@@ -1,5 +1,5 @@
 # node-msql-todolist
-Nodejs server, biedt API op een ToDo list MySql database. De API endpoints zijn beveiligd met [JavaScript Web Tokens](https://jwt.io/), dus je moet inloggen voordat je de services kunt gebruiken.
+Nodejs server, biedt API op een ToDo list MySql database. De API endpoints zijn beveiligd met [JavaScript Web Tokens](https://jwt.io/), dus je moet inloggen voordat je de services kunt gebruiken. Voor dit project is ook een [Android client](https://github.com/avansinformatica/android-todolist) beschikbaar.
 
 ## Vooraf
 - nodejs installeren
