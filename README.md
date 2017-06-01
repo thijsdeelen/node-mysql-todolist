@@ -4,7 +4,7 @@ Nodejs server, biedt API op een ToDo list MySql database. De API endpoints zijn 
 ## Vooraf
 - nodejs installeren
 - MySql of MariaDB installeren (bv. via XAMPP)
-- het script `tododb.sql` importeren in MySQL. 
+- het script `tododb.sql` importeren in de database. 
 
 ## Gebruik
 Vanaf command line:
@@ -24,27 +24,27 @@ Stuur een POST naar /api/v1/login met in de body:
     "password": "test"
 }
 ```
-Je krijgt dan een JWT token dat je met ieder request in de header mee moet sturen. 
+Je krijgt dan een JWT token dat je in de header van ieder request mee moet sturen. 
 De header die je moet instellen:
 
 ```
-Authorization:   Bearer <jwt token>
+Authorization:   Bearer <JWT token>
 ```
 
 Voorbeelden van endpoints: 
-- [localhost:3000/api/v1/todos](http://localhost:3000/api/v1/todos)
-- [localhost:3000/api/v1/todos/2](http://localhost:3000/api/v1/todos/2)
+- GET,POST [localhost:3000/api/v1/todos](http://localhost:3000/api/v1/todos)
+- GET, PUT, DELETE [localhost:3000/api/v1/todos/2](http://localhost:3000/api/v1/todos/2)
 
-## Tests
-Het project bevat een aantal tests. Deze zijn natuurlijk niet compleet, maar geven een idee van hoe je een project als dit kunt testen.
+## Testen
+Het project bevat een aantal testen. Deze zijn natuurlijk niet compleet, maar geven een idee van hoe je een project als dit kunt testen.
 
-Om de tests uit te voeren:
+Om de testen uit te voeren:
 ```
 npm test
 ```
-De tests worden ook, na een push naar GitHub, uitgevoerd op [Travis CI](https://travis-ci.org/avansinformatica). Het project wordt alleen als de tests slagen op [Heroku](https://mynodetodolistserver.herokuapp.com/api/v1/todos) gedeployed. De configuratie voor Travis staat beschreven in `travis.yml`.
+De testen worden ook, na een push naar GitHub, uitgevoerd op [Travis CI](https://travis-ci.org/avansinformatica). Het project wordt alleen als de testen slagen op [Heroku](https://mynodetodolistserver.herokuapp.com/api/v1/todos) gedeployed. De configuratie voor Travis staat beschreven in `.travis.yml`. Koppel Travis via een account aan je eigen GitHub repository.
 
-## Static Code Analysis
+## Static Code Analysis met SonarQube
 Er is ook een configuratie voor static code analysis met behulp van [SonarQube](https://sonarqube.com/organizations/avansinformaticabreda/projects). Deze anayse geeft je inzicht in de kwaliteit van je code.
 
 De analyse wordt nog op je lokale machine uitgevoerd en daarna automatisch online gezet. Je moet de analyse dus nog handmatig triggeren. Hierbij wordt gebruik gemaakt van [Gulpjs](http://gulpjs.com/), en van de npm module [sonarqube-scanner](https://www.npmjs.com/package/sonarqube-scanner).
