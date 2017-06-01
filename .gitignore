@@ -3,3 +3,5 @@
 node_modules
 .idea
 .sonar/
+coverage/
+package-lock.json
