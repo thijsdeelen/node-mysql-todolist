@@ -32,15 +32,16 @@
         "mysql": "^2.13.0"
     },
     "devDependencies": {
+        "buffer-shims": "^1.0.0",
         "chai": "^3.5.0",
         "chai-http": "^3.0.0",
         "gulp": "^3.9.1",
         "gulp-istanbul": "^1.1.1",
-        "gulp-mocha": "^3.0.1",
+        "gulp-mocha": "^4.0.1",
         "mocha": "^3.3.0",
         "nodemon": "^1.11.0",
         "run-sequence": "^1.2.2",
         "sinon": "^2.3.2",
-        "sonarqube-scanner": "^1.1.0"
+        "sonarqube-scanner": "^1.2.0"
     }
 }

@@ -18,6 +18,7 @@ var mocha = require('gulp-mocha');
 // Voer deze uit via 'gulp sonarqube' of via npm run sonar'.
 //
 gulp.task('sonarqube', ['test'], function(callback) {
+    // gulp.task('sonarqube', function(callback) {
     //
     // Info over instellingen van sonarqubeScanner: 
     // https://docs.sonarqube.org/display/SONAR/Analysis+Parameters
